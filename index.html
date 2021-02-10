@@ -12,6 +12,123 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: hsl(204, 43%, 93%);
+      font-family: 'Karla', sans-serif;
+
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    #section1 {
+      grid-area: section1;
+    }
+
+    #section2 {
+      grid-area: section2;
+      background-color: hsl(179, 62%, 43%);
+      /* width: 100%; */
+      /* overflow: hidden; */
+    }
+
+    #section3 {
+      grid-area: section3;
+      background-color: hsl(179, 47%, 52%);
+      max-width: 100% !important;
+    }
+
+    h1 {
+      color: hsl(179, 62%, 43%);
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #fff;
+      font-weight: 400;
+      font-size: 22px;
+    }
+
+    P, li {
+      color: #ffffff99;
+      font-weight: 400;
+    }
+
+    li {
+      font-size: 15px;
+      line-height: 23px;
+    }
+
+    #section3 ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    #section1 h2 {
+      color: hsl(71, 73%, 54%);
+      font-weight: 700;
+    }
+
+    #section1 p {
+      color: #B1B4BE;
+      line-height: 25px;
+    }
+    
+    main {
+      display: grid;
+      grid-template-areas: 
+        'section1 section1'
+        'section2 section3';
+      background-color: #fff;
+      grid-template-columns: 50% 2fr;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 50%;
+    }
+
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div button {
+      width: 100%;
+      height: 50px;
+      background-color: hsl(71, 73%, 54%);
+      border: none;
+      border-radius: 7px;
+      font-family: 'Karla', sans-serif;
+      font-weight: 700;
+      color: #fff;
+      font-size: 17px;
+      cursor: pointer;
+      margin: 20px 0 20px;
+      transition: background-color 50ms;
+    }
+
+    div button:hover {
+      background-color: hsl(71, 73%, 48%);
+    }
+
+    footer {
+      background-color: cadetblue;
+      /* align-self: flex-end; */
+    }
+
+    span {
+      font-size: 40px;
+      color: #fff;
+    }
 
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -23,12 +140,11 @@
       <section id="section1">
         <h1>Join our community</h1>
         <h2>30-day, hassle-free money back guarantee</h2>
-        <p>Gain access to our full library of tutorials along with expert code reviews.</p>
-        <p>Perfect for any developers who are serious about honing their skills.</p>
+        <p>Gain access to our full library of tutorials along with expert code reviews.<br/>Perfect for any developers who are serious about honing their skills.</p>
       </section>
       <section id="section2">
         <h2>Monthly Subscription</h2>
-        <aaa>$29 <span>per month</span></aaa>
+        <p><span>$29</span> per month</p>
         <p>Full access for less than $1 a day</p>
         <div><button type="button">Sign Up</button></div>
       </section>
@@ -42,7 +158,7 @@
           <li>Community forum</li>
           <li>Flashcard decks</li>
           <li>New videos every week</li>
-        </ul>
+        </ul> 
       </section>
     </main>
   <!-- </div>   -->
