@@ -23,6 +23,8 @@
       height: 100vh;
       margin: 0;
       padding: 0;
+
+      /* font-size:  */
     }
 
     section {
@@ -114,6 +116,10 @@
       cursor: pointer;
       margin: 20px 0 20px;
       transition: background-color 50ms;
+
+      -webkit-box-shadow: 0px 12px 39px -10px rgba(30,121,120,1);
+      -moz-box-shadow: 0px 12px 39px -10px rgba(30,121,120,1);
+      box-shadow: 0px 12px 39px -10px rgba(30,121,120,1);
     }
 
     div button:hover {
@@ -132,6 +138,27 @@
 
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    @media (max-width: 860px) {
+      body {
+        height: auto;
+      }
+
+      main {
+        grid-template-areas:
+          'section1'
+          'section2'
+          'section3';
+        grid-template-columns: 100% 3fr;
+        width: 85%;
+        margin: 80px 0;
+        border-radius: 5px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
 <body>
